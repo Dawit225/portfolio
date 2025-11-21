@@ -1,4 +1,5 @@
 /* ---- Variables ---- */
+
 :root{
   --bg:#fbfbfd;
   --panel:#ffffff;
@@ -100,3 +101,4 @@ a.small-link:hover{opacity:0.95;transform:translateX(4px);transition:all .25s ea
   .topbar .wrap{flex-direction:column;gap:12px;align-items:flex-start}
   .nav a{margin-left:12px}
 }
+
