@@ -1,193 +1,409 @@
-<!doctype html>
-<html lang="en">
+<!-- 
+    Single-file portfolio for Dawit Beyene. 
+    Design Aesthetic: Bright, modern, clean, and professional (Light Mode).
+    Framework: Tailwind CSS via CDN (single-file mandate).
+    All content adheres strictly to user requirements.
+-->
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dawit Beyene — Test Engineer & Test Analyst</title>
-  <meta name="description" content="Dawit Beyene — ISTQB Advanced Test Analyst. Test automation, API testing, CI/CD.">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawit Beyene | Test Engineer with expertise in data analysis</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Font: Inter -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+
+    <style>
+        :root {
+            /* Professional Cyan Accent Color */
+            --color-primary: 6, 195, 212; /* Cyan-600 */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* Off-white background */
+            color: #1f2937; /* Dark Gray text */
+        }
+        .accent-text {
+            color: rgb(var(--color-primary));
+        }
+        .accent-bg {
+            background-color: rgb(var(--color-primary) / 1);
+        }
+        .card {
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Subtle Fade-Up on Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
+<body class="antialiased">
 
-<body>
-  <header class="topbar">
-    <div class="wrap">
-      <a class="brand" href="#">Dawit Beyene</a>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+    <!-- 1. Sticky Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm shadow-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Name -->
+                <a href="#hero" class="text-xl font-extrabold text-gray-900 tracking-tight">Dawit Beyene</a>
+                
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#about" class="text-gray-600 hover:accent-text transition duration-150">About</a>
+                    <a href="#skills" class="text-gray-600 hover:accent-text transition duration-150">Expertise</a>
+                    <a href="#projects" class="text-gray-600 hover:accent-text transition duration-150">Projects</a>
+                    <a href="#experience" class="text-gray-600 hover:accent-text transition duration-150">Experience</a>
+                    <a href="#contact" class="text-gray-600 hover:accent-text transition duration-150">Contact</a>
+                </nav>
 
-      </nav>
+                <!-- Mobile Menu Button -->
+                <button id="menu-button" class="md:hidden p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-50 transition duration-150" aria-label="Toggle menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-white transform -translate-x-full md:hidden transition-transform duration-300 ease-in-out">
+        <div class="p-6 h-16 flex justify-end items-center border-b border-gray-100">
+            <button id="close-menu-button" class="p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-50 transition duration-150" aria-label="Close menu">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <nav class="p-6 flex flex-col space-y-4 text-lg font-semibold">
+            <a href="#about" class="mobile-nav-link text-gray-800 hover:accent-text py-2 border-b border-gray-50 transition duration-150">About</a>
+            <a href="#skills" class="mobile-nav-link text-gray-800 hover:accent-text py-2 border-b border-gray-50 transition duration-150">Expertise</a>
+            <a href="#projects" class="mobile-nav-link text-gray-800 hover:accent-text py-2 border-b border-gray-50 transition duration-150">Projects</a>
+            <a href="#experience" class="mobile-nav-link text-gray-800 hover:accent-text py-2 border-b border-gray-50 transition duration-150">Experience</a>
+            <a href="#contact" class="mobile-nav-link text-gray-800 hover:accent-text py-2 transition duration-150">Contact</a>
+        </nav>
     </div>
-  </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-left">
-          <h1 class="title">Dawit Beyene</h1>
-          <p class="eyebrow">ISTQB Advanced Test Analyst • Test Engineer</p>
-          <p class="lead">
-            I build dependable test frameworks and clear, repeatable test strategies for regulated systems and web platforms.
-            Focused on automation, API testing, risk-based analysis and CI/CD integration.
-          </p>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <div class="actions">
-            <a class="primary" href="/mnt/data/CV - Dawit Beyene.pdf" target="_blank" rel="noopener">Download CV</a>
-            <a class="secondary" href="/mnt/data/Dawit - CV.pdf" target="_blank" rel="noopener">Alternate CV</a>
-            <a class="link" href="#projects">View Projects</a>
-          </div>
+        <!-- 2. Hero Section -->
+        <section id="hero" class="py-24 md:py-36 text-center">
+            <p class="text-sm font-medium tracking-widest uppercase accent-text mb-4 fade-in">
+                Test Engineer | Regulatory Compliance & Data Science
+            </p>
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-gray-900 tracking-tight max-w-5xl mx-auto mb-6 leading-tight fade-in" style="transition-delay: 0.1s;">
+                Crafting Intelligent Test Systems with Automation & Data Science
+            </h1>
+            <p class="text-lg md:text-xl text-gray-500 max-w-3xl mx-auto mb-10 fade-in" style="transition-delay: 0.2s;">
+                ISTQB Advanced Certified Test Analyst specializing in regulatory compliance, embedded hardware validation, and building robust, data-informed test frameworks.
+            </p>
+            <a 
+                href="mailto:dawithaile225@gmail.com?subject=Opportunity%20Discussion%20from%20Portfolio" 
+                class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-semibold rounded-xl shadow-lg text-white accent-bg hover:bg-cyan-700 transition duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-cyan-500/50 fade-in" 
+                style="transition-delay: 0.3s;"
+            >
+                Connect & Discuss Roles <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+            </a>
+        </section>
+
+        <!-- Main Content Wrapper -->
+        <div class="space-y-24 pb-24">
+
+            <!-- 3. About Section -->
+            <section id="about" class="fade-in pt-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">About & Certification</h2>
+                <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 card p-8 md:p-12 rounded-3xl shadow-xl">
+                    
+                    <!-- Profile Picture -->
+                    <div class="lg:col-span-1 flex justify-center">
+                        <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-cyan-500/50 shadow-lg">
+                            <img 
+                                src="uploaded:1756479196293.jpeg-98e619b7-08c1-48b9-a82c-4b9664868cba" 
+                                onerror="this.onerror=null; this.src='https://placehold.co/400x400/F3F4F6/6B7280?text=DB+Photo';"
+                                alt="Dawit Beyene Profile Picture" 
+                                class="w-full h-full object-cover"
+                            >
+                        </div>
+                    </div>
+
+                    <!-- About Text -->
+                    <div class="lg:col-span-2">
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            ISTQB Advanced Test Analyst certified Test Engineer with a solid foundation in Computer Science (BSc) and specialized expertise in Geoinformatics (MSc). My experience is rooted in functional testing, test design, automation, API validation, and risk-based testing, primarily focused on highly regulated environments like gaming systems (GLI Europe).
+                        </p>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            I leverage my data analysis background (Python, R, GIS) to build robust, reproducible workflows and provide data-driven insights that elevate product quality and facilitate seamless global regulatory certification across diverse markets.
+                        </p>
+                        <a href="https://atsqa.org/certified-testers/profile/d6527ce36dc148fba38011e727c59a7e" target="_blank" class="accent-text hover:text-cyan-800 font-semibold inline-flex items-center transition duration-150 border-b border-cyan-300 pb-1">
+                            ISTQB ADVANCED TEST ANALYST Certified <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Skills Grid (Core Expertise) -->
+            <section id="skills" class="fade-in pt-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Core Expertise</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    
+                    <!-- Skill Card 1: Regulatory Compliance & Strategy -->
+                    <div class="card p-8 rounded-2xl shadow-lg hover:border-cyan-500">
+                        <div class="p-3 bg-cyan-100 rounded-xl inline-block mb-4"><i data-lucide="shield-check" class="w-6 h-6 accent-text"></i></div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Global Regulatory Compliance & Strategy</h3>
+                        <ul class="text-gray-600 space-y-3 list-disc pl-5">
+                            <li>Developed and executed comprehensive test plans for gaming hardware and software, ensuring compliance with **regulatory standards** (e.g., Novomatic, EGT).</li>
+                            <li>Supported **regulatory compliance** by conducting tests aligned with jurisdictional requirements, facilitating successful certification across global markets.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Card 2: Specialized Gaming Validation -->
+                    <div class="card p-8 rounded-2xl shadow-lg hover:border-cyan-500">
+                        <div class="p-3 bg-cyan-100 rounded-xl inline-block mb-4"><i data-lucide="trello" class="w-6 h-6 accent-text"></i></div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Specialized Gaming Validation</h3>
+                        <ul class="text-gray-600 space-y-3 list-disc pl-5">
+                            <li>Conducted functional, regression, and performance testing on complex gaming systems and game engines.</li>
+                            <li>Performed **hardware compatibility testing** for gaming devices and verified **software integrity and security**.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Card 3: Quality Tooling & Efficiency -->
+                    <div class="card p-8 rounded-2xl shadow-lg hover:border-cyan-500">
+                        <div class="p-3 bg-cyan-100 rounded-xl inline-block mb-4"><i data-lucide="code" class="w-6 h-6 accent-text"></i></div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Automation, Tooling & Programming</h3>
+                        <ul class="text-gray-600 space-y-3 list-disc pl-5">
+                            <li>Proficient in **Automation** using Selenium, Playwright, and PyTest for modular, reusable frameworks.</li>
+                            <li>Core **Programming** skills: Python, C++, SQL. Utilized Jira and proprietary GLI tools.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Skill Card 4: Cross-Functional Leadership & Data -->
+                    <div class="card p-8 rounded-2xl shadow-lg hover:border-cyan-500">
+                        <div class="p-3 bg-cyan-100 rounded-xl inline-block mb-4"><i data-lucide="trending-up" class="w-6 h-6 accent-text"></i></div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Data-Driven Insights & Collaboration</h3>
+                        <ul class="text-gray-600 space-y-3 list-disc pl-5">
+                            <li>Leveraged Geoinformatics (MSc) background for data analysis and providing actionable, data-driven insights.</li>
+                            <li>Collaborated with cross-functional teams (developers, product managers) to resolve critical issues and enhance quality.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Projects Section -->
+            <section id="projects" class="fade-in pt-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Key Projects & Research</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    
+                    <!-- Project Card 1 -->
+                    <div class="card p-6 rounded-xl shadow-md hover:border-cyan-500">
+                        <i data-lucide="flask-conical" class="w-8 h-8 accent-text mb-3"></i>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">MSc Thesis: Reproducible Geoprocessing Workflows</h3>
+                        <p class="text-sm text-gray-500">Research into semantic annotation to enhance the reproducibility and reliability of complex geospatial data processing pipelines.</p>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="card p-6 rounded-xl shadow-md hover:border-cyan-500">
+                        <i data-lucide="robot" class="w-8 h-8 accent-text mb-3"></i>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Modular Automation Framework (Selenium/PyTest)</h3>
+                        <p class="text-sm text-gray-500">Designed and implemented a scalable framework integrated into CI for continuous regression testing and rapid feature validation.</p>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="card p-6 rounded-xl shadow-md hover:border-cyan-500">
+                        <i data-lucide="cloud" class="w-8 h-8 accent-text mb-3"></i>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">API Contract & Schema Testing Suite</h3>
+                        <p class="text-sm text-gray-500">Development of a comprehensive API testing suite using Postman/Python Requests to enforce contract integrity and data validation.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Experience Timeline -->
+            <section id="experience" class="fade-in pt-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Professional Experience & Education</h2>
+                <div class="max-w-4xl mx-auto relative">
+                    <!-- Vertical Line -->
+                    <div class="absolute left-3 md:left-1/2 md:-translate-x-1/2 w-0.5 h-full bg-gray-200" aria-hidden="true"></div>
+
+                    <!-- Experience Item 1: GLI -->
+                    <div class="relative mb-8 md:grid md:grid-cols-2 md:gap-12 items-start">
+                        <!-- Circle Indicator -->
+                        <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 w-6 h-6 accent-bg rounded-full border-4 border-f9fafb shadow-lg z-10"></div>
+                        
+                        <!-- Content: Left (Details) -->
+                        <div class="md:col-span-1 md:pr-10 md:text-right pt-2 md:pt-0">
+                            <span class="text-sm font-medium text-gray-500">2021 – Present</span>
+                            <h3 class="text-xl font-semibold text-gray-900">Test Engineer</h3>
+                            <p class="text-gray-600">GLI Europe B.V., Haarlem, NL</p>
+                        </div>
+                        
+                        <!-- Content: Right (Description Card) -->
+                        <div class="md:col-span-1 md:pl-10 mt-4 md:mt-0 ml-10 md:ml-0 md:p-4 card rounded-lg shadow-md">
+                            <p class="text-gray-600">Specializing in regulatory compliance testing, hardware/software validation, and test automation for the global gaming industry. Certified in advanced test analysis.</p>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 2: Woldia University -->
+                    <div class="relative mb-8 md:grid md:grid-cols-2 md:gap-12 items-start">
+                        <!-- Circle Indicator -->
+                        <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 w-6 h-6 accent-bg rounded-full border-4 border-f9fafb shadow-lg z-10"></div>
+                        
+                        <!-- Content: Right (Details) -->
+                        <div class="md:col-span-1 md:pl-10 mt-4 md:mt-0 ml-10 md:ml-0 md:p-4 card rounded-lg shadow-md order-2 md:order-2">
+                            <span class="text-sm font-medium text-gray-500">2017 – 2019</span>
+                            <h3 class="text-xl font-semibold text-gray-900">Graduate Assistant Lecturer</h3>
+                            <p class="text-gray-600">Woldia University, Ethiopia</p>
+                        </div>
+                        
+                        <!-- Content: Left (Description Card) -->
+                        <div class="md:col-span-1 md:pr-10 md:text-right pt-2 md:pt-0 order-1 md:order-1">
+                            <p class="text-gray-600">Taught foundational computer science and programming courses (C++). Mentored undergraduate students on final year projects and provided essential lab tutorials.</p>
+                        </div>
+                    </div>
+
+                    <!-- Education Item 1: MSc -->
+                    <div class="relative mb-8 md:grid md:grid-cols-2 md:gap-12 items-start">
+                        <!-- Circle Indicator -->
+                        <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 w-6 h-6 accent-bg rounded-full border-4 border-f9fafb shadow-lg z-10"></div>
+                        
+                        <!-- Content: Left (Details) -->
+                        <div class="md:col-span-1 md:pr-10 md:text-right pt-2 md:pt-0">
+                            <span class="text-sm font-medium text-gray-500">2019 – 2021</span>
+                            <h3 class="text-xl font-semibold text-gray-900">MSc. Geoinformatics</h3>
+                            <p class="text-gray-600">University of Twente, NL</p>
+                        </div>
+                        
+                        <!-- Content: Right (Description Card) -->
+                        <div class="md:col-span-1 md:pl-10 mt-4 md:mt-0 ml-10 md:ml-0 md:p-4 card rounded-lg shadow-md">
+                            <p class="text-gray-600">Specialized in advanced geospatial data analysis. Thesis focused on reproducible geoprocessing workflows using semantic annotation.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Contact Card -->
+            <section id="contact" class="fade-in pt-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Get In Touch</h2>
+                <div class="max-w-3xl mx-auto card p-8 md:p-12 rounded-3xl shadow-xl text-center">
+                    <p class="text-lg text-gray-600 mb-8">
+                        I am currently open to new Test Engineering and Validation roles, particularly those integrating compliance, automation, or data analysis. Based in Velsen-Noord, Netherlands.
+                    </p>
+                    <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
+                        
+                        <!-- Email -->
+                        <a href="mailto:dawithaile225@gmail.com" class="inline-flex items-center justify-center font-medium text-gray-700 hover:accent-text transition duration-150">
+                            <i data-lucide="mail" class="w-5 h-5 mr-2 accent-text"></i> dawithaile225@gmail.com
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/dawit-haile-beyene" target="_blank" class="inline-flex items-center justify-center font-medium text-gray-700 hover:accent-text transition duration-150">
+                            <i data-lucide="linkedin" class="w-5 h-5 mr-2 accent-text"></i> LinkedIn Profile
+                        </a>
+                    </div>
+
+                    <div class="border-t border-gray-200 pt-6">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-3">Direct Contact</h4>
+                        <div class="text-gray-600 space-y-2 font-medium">
+                            <a href="tel:+31687381398" class="block hover:accent-text transition">
+                                <i data-lucide="phone" class="w-4 h-4 mr-2 inline-block"></i> +31 6 87 38 13 98 (Mobile 1)
+                            </a>
+                             <a href="tel:+31648352778" class="block hover:accent-text transition">
+                                <i data-lucide="phone" class="w-4 h-4 mr-2 inline-block"></i> +31 6 48 35 27 78 (Mobile 2)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
 
-        <aside class="hero-right card quiet">
-          <p class="muted">Contact</p>
-          <p class="strong">dawithaile225@gmail.com</p>
-          <p class="muted">Phone</p>
-          <p class="strong">+31 6 87 38 13 98</p>
-          <p class="muted">Location</p>
-          <p>Velsen-Noord, Netherlands</p>
-          <div class="badges">
-            <span class="badge">ISTQB Advanced</span>
-            <span class="badge">MSc Geoinformatics</span>
-          </div>
-        </aside>
-      </div>
-    </section>
+    </main>
 
-    <!-- ABOUT -->
-    <section id="about" class="section wrap">
-      <div class="cols">
-        <div>
-          <h2>About</h2>
-          <p class="muted">
-            Detail-oriented test engineer with strong background in test analysis, automation, API & backend validation,
-            and compliance verification for gaming and embedded systems. I combine systematic test design with pragmatic
-            automation to reduce risk and increase release confidence.
-          </p>
+    <!-- 8. Footer -->
+    <footer class="mt-24 py-8 border-t border-gray-200 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            <p>&copy; 2025 Dawit Beyene. Built with clean, modern standards.</p>
         </div>
+    </footer>
 
-        <div class="mini card">
-          <h3>Core focus</h3>
-          <ul>
-            <li>Risk-based testing & test design</li>
-            <li>Automation frameworks (Selenium / Playwright / PyTest)</li>
-            <li>API validation & schema testing</li>
-            <li>CI/CD pipelines & GitHub Actions</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Initialize Lucide Icons
+            lucide.createIcons();
 
-    <!-- SKILLS -->
-    <section id="skills" class="section alt">
-      <div class="wrap">
-        <h2>Skills</h2>
-        <div class="skill-grid">
-          <div class="skill card">
-            <h4>Testing</h4>
-            <p>Advanced test analysis, black-box techniques, requirement mapping, test coverage & traceability.</p>
-          </div>
-          <div class="skill card">
-            <h4>Automation</h4>
-            <p>Selenium, Playwright, PyTest, modular frameworks, reporting and data-driven suites.</p>
-          </div>
-          <div class="skill card">
-            <h4>API & Backend</h4>
-            <p>Postman, Python Requests, JSON Schema, contract testing and negative-case validation.</p>
-          </div>
-          <div class="skill card">
-            <h4>DevOps</h4>
-            <p>GitHub Actions, Docker, Jenkins — CI gating, nightly regression, deploy validations.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+            // 2. Mobile Menu Toggle Logic
+            const menuButton = document.getElementById('menu-button');
+            const closeMenuButton = document.getElementById('close-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <div class="wrap">
-        <h2>Selected projects</h2>
+            const toggleMobileMenu = () => {
+                const isHidden = mobileMenu.classList.contains('-translate-x-full');
+                if (isHidden) {
+                    mobileMenu.classList.remove('-translate-x-full');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling background
+                } else {
+                    mobileMenu.classList.add('-translate-x-full');
+                    document.body.style.overflow = '';
+                }
+            };
 
-        <div class="projects">
-          <article class="project card">
-            <h3>Modular Automation Framework</h3>
-            <p class="muted">Selenium + PyTest framework with parametrization, parallel execution and HTML reporting. Integrated with GitHub Actions for nightly regressions.</p>
-            <a class="small-link" href="https://github.com/YOUR_GITHUB/YOUR_REPO" target="_blank" rel="noopener">View repo ↗</a>
-          </article>
+            menuButton.addEventListener('click', toggleMobileMenu);
+            closeMenuButton.addEventListener('click', toggleMobileMenu);
 
-          <article class="project card">
-            <h3>API Contract & Schema Testing</h3>
-            <p class="muted">Automated schema checks, negative testing, and performance smoke checks. Gated in CI to prevent regressions.</p>
-            <a class="small-link" href="https://github.com/YOUR_GITHUB/YOUR_REPO" target="_blank" rel="noopener">View repo ↗</a>
-          </article>
+            // Close menu on link click
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', toggleMobileMenu);
+            });
 
-          <article class="project card">
-            <h3>Geospatial Reproducibility (MSc)</h3>
-            <p class="muted">Thesis work on reproducible geoprocessing workflows using semantic metadata and reproducible pipelines.</p>
-            <a class="small-link" href="#" target="_blank" rel="noopener">Read summary</a>
-          </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section alt">
-      <div class="wrap">
-        <h2>Experience</h2>
-        <div class="timeline card">
-          <div class="row">
-            <div class="role">
-              <h4>Test Engineer — Gaming Laboratories International (GLI)</h4>
-              <p class="muted">2021 — Present</p>
-            </div>
-            <div class="desc muted">
-              Test planning and execution for gaming systems; hardware/software verification; compliance testing; automation and regression suites.
-            </div>
-          </div>
+            // 3. Smooth Scrolling for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href.length > 1) { 
+                        e.preventDefault();
+                        const targetElement = document.querySelector(href);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
 
-          <div class="row">
-            <div class="role">
-              <h4>Graduate Assistant Lecturer — Woldia University</h4>
-              <p class="muted">2017 — 2019</p>
-            </div>
-            <div class="desc muted">
-              Lectured programming & systems courses; supervised projects and lab sessions.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            // 4. Subtle Fade-Up on Scroll Observer
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1 
+            };
 
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="wrap">
-        <h2>Contact</h2>
-        <div class="contact-grid">
-          <div class="card">
-            <h3>Quick contact</h3>
-            <p>Email: <a href="mailto:dawithaile225@gmail.com">dawithaile225@gmail.com</a></p>
-            <p>Phone: <a href="tel:+31687381398">+31 6 87 38 13 98</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/dawit-haile-beyene" target="_blank" rel="noopener">dawit-haile-beyene</a></p>
-          </div>
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
 
-          
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer quiet">
-    <div class="wrap">
-      <div class="foot-left">© 2025 Dawit Beyene</div>
-    </div>
-  </footer>
-
-  <script src="contact.js"></script>
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
 </html>
-
-
