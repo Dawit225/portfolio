@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dawit Beyene | Senior Test Engineer & ISTQB Advanced Analyst</title>
+    <title>Dawit Beyene | Test Engineer & ISTQB Advanced Test Analyst</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -54,6 +54,19 @@
         .content-container {
             max-width: 1200px;
         }
+        
+        /* Custom style for the detailed experience list */
+        .experience-list li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .experience-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #3b82f6; /* Blue-500 */
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -62,8 +75,9 @@
     <!-- Sticky Navigation Bar -->
     <header class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-700 shadow-xl">
         <div class="content-container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <!-- UPDATED: Changed D<span class="text-blue-500">B</span>. to full name -->
             <a href="#hero" class="text-xl font-extrabold text-white tracking-wider">
-                D<span class="text-blue-500">B</span>.
+                Dawit <span class="text-blue-500">Beyene</span>
             </a>
             
             <!-- Desktop Navigation -->
@@ -73,9 +87,6 @@
                 <a href="#projects" class="text-sm font-medium text-gray-300 hover:text-blue-400 transition">Projects</a>
                 <a href="#experience" class="text-sm font-medium text-gray-300 hover:text-blue-400 transition">Journey</a>
                 <a href="#contact" class="text-sm font-medium text-gray-300 hover:text-blue-400 transition">Contact</a>
-                <a href="/mnt/data/CV - Dawit Beyene.pdf" target="_blank" class="text-sm font-semibold bg-blue-600 hover:bg-blue-700 text-white py-1 px-4 rounded-full transition duration-300 shadow-md">
-                    CV
-                </a>
             </nav>
 
             <!-- Mobile Menu Toggle -->
@@ -97,9 +108,6 @@
                 <a href="#projects" class="mobile-link text-2xl font-medium text-white hover:text-blue-400 transition py-2 border-b border-gray-700">Projects</a>
                 <a href="#experience" class="mobile-link text-2xl font-medium text-white hover:text-blue-400 transition py-2 border-b border-gray-700">Journey</a>
                 <a href="#contact" class="mobile-link text-2xl font-medium text-white hover:text-blue-400 transition py-2 border-b border-gray-700">Contact</a>
-                <a href="/mnt/data/CV - Dawit Beyene.pdf" target="_blank" class="mobile-link text-xl font-semibold bg-blue-600 text-center text-white py-3 rounded-xl hover:bg-blue-700 transition mt-6">
-                    Download CV
-                </a>
             </nav>
         </div>
     </div>
@@ -109,10 +117,10 @@
         <!-- 1. Hero Section -->
         <section id="hero" class="min-h-[70vh] flex flex-col justify-center items-center text-center py-20 fade-in" style="--delay: 0s;">
             <p class="text-sm font-semibold tracking-widest uppercase text-blue-400 mb-4 bg-gray-800 py-1 px-4 rounded-full shadow-lg ring-1 ring-blue-500/20">
-                Senior Test Engineer | ISTQB Advanced Analyst
+                Test Engineer | ISTQB Advanced Test Analyst
             </p>
             <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tighter text-white max-w-4xl">
-                Designing <span class="text-blue-500">Robust</span>, Data-Informed Quality Systems.
+                Crafting <span class="text-blue-500">Intelligent</span> Test Systems with Automation & Data Science.
             </h1>
             <p class="mt-6 text-lg sm:text-xl text-gray-400 max-w-3xl">
                 ISTQB Advanced Certified Test Analyst specializing in automation, embedded hardware validation, and regulatory compliance.
@@ -136,19 +144,13 @@
                 <p class="text-lg text-gray-300 leading-relaxed">
                     ISTQB Advanced Test Analyst certified Test Engineer with strong experience in functional testing, test design, automation (Selenium, Playwright, PyTest), API testing (Postman, Python Requests), risk-based testing, and CI/CD integration. My background in gaming system testing, embedded hardware validation, and reproducible workflows (MSc Geoinformatics) gives me a unique perspective on comprehensive quality assurance across complex systems.
                 </p>
-                <div class="mt-8 pt-6 border-t border-gray-700 flex flex-wrap gap-4 justify-center sm:justify-between items-center">
-                    <p class="text-blue-400 font-semibold flex items-center">
+                <div class="mt-8 pt-6 border-t border-gray-700 flex flex-wrap gap-4 justify-start items-center">
+                    <!-- LINK UPDATED IN PREVIOUS STEP -->
+                    <a href="https://atsqa.org/certified-testers/profile/d6527ce36dc148fba38011e727c59a7e" target="_blank" class="text-blue-400 font-semibold flex items-center hover:text-blue-300 transition">
                         <i data-lucide="award" class="w-5 h-5 mr-2"></i> 
                         ISTQB Advanced Level Test Analyst Certified
-                    </p>
-                    <div class="flex gap-4">
-                        <a href="/mnt/data/CV - Dawit Beyene.pdf" target="_blank" class="text-sm font-medium text-gray-300 hover:text-white flex items-center bg-gray-700 px-3 py-1.5 rounded-full transition">
-                            <i data-lucide="download" class="w-4 h-4 mr-1"></i> CV (Primary)
-                        </a>
-                        <a href="/mnt/data/Dawit - CV.pdf" target="_blank" class="text-sm font-medium text-gray-300 hover:text-white flex items-center bg-gray-700 px-3 py-1.5 rounded-full transition">
-                            <i data-lucide="download" class="w-4 h-4 mr-1"></i> CV (Alt.)
-                        </a>
-                    </div>
+                        <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -166,7 +168,7 @@
                     <ul class="space-y-2 text-gray-400 text-sm">
                         <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Advanced test analysis</li>
                         <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Black-box & embedded testing</li>
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Requirement mapping & traceability</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Regulatory compliance testing</li>
                         <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Risk-based testing methodologies</li>
                     </ul>
                 </div>
@@ -202,7 +204,7 @@
                     <ul class="space-y-2 text-gray-400 text-sm">
                         <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> GitHub Actions setup</li>
                         <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Jenkins integration</li>
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Docker fundamentals</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Defect tracking (Jira/GLI tools)</li>
                         <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Automated deployment pipelines</li>
                     </ul>
                 </div>
@@ -262,7 +264,17 @@
                                 <p class="text-sm text-blue-400 font-semibold mb-1">2021 – Present</p>
                                 <h3 class="text-xl font-bold text-white">Test Engineer</h3>
                                 <p class="text-gray-400 mb-2">GLI Europe B.V., Haarlem, NL</p>
-                                <p class="text-gray-500 text-sm">Specializing in regulatory compliance testing, hardware/software validation, test design, and automation within highly regulated environments (gaming systems).</p>
+                                <!-- Detailed Experience Points added here -->
+                                <ul class="text-gray-500 text-sm space-y-2 experience-list">
+                                    <li>Developed and executed comprehensive test plans for gaming hardware (e.g., slot machines, controllers) and software (e.g., game engines), ensuring compliance with regulatory standards across several markets (e.g., North America, Europe) for clients like Novomatic, EGT.</li>
+                                    <li>Conducted functional, regression, and performance testing on gaming systems.</li>
+                                    <li>Performed hardware compatibility testing for gaming devices, validating performance under diverse conditions.</li>
+                                    <li>Utilized testing tools, e.g., Jira and proprietary GLI tools, to track defects, manage test cases, and streamline reporting, improving testing efficiency.</li>
+                                    <li>Collaborated with cross-functional teams, including developers, product managers, and regulatory bodies, to resolve critical issues and ensure adherence to client specifications and industry standards.</li>
+                                    <li>Verified software integrity and security through authentication and validation processes, ensuring safe deployment on casino floors.</li>
+                                    <li>Prepared detailed test reports and documentation for stakeholders, providing actionable insights that enhanced product quality.</li>
+                                    <li>Supported regulatory compliance by conducting tests aligned with jurisdictional requirements, facilitating successful certification across global markets.</li>
+                                </ul>
                             </div>
                         </div>
                         <div class="timeline-dot absolute left-6 top-7 md:left-1/2 w-4 h-4 bg-blue-600 rounded-full border-2 border-gray-900 transform md:-translate-x-1/2"></div>
@@ -317,7 +329,7 @@
             
             <div class="bg-gray-800 p-8 sm:p-10 rounded-3xl border border-gray-700 shadow-2xl max-w-2xl mx-auto text-center">
                 <p class="text-lg text-gray-300 mb-8">
-                    I am currently open to new Senior Test Engineering or advanced validation roles that require expertise in compliance, automation, and data analysis.
+                    I am currently open to new Test Engineering or advanced validation roles that require expertise in compliance, automation, and data analysis.
                 </p>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
