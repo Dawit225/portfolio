@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dawit Beyene | Test Engineer & ISTQB Advanced Test Analyst</title>
+    <title>Dawit Beyene | ISTQB Advanced Test Analyst</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <!-- Load Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
-        /* Custom Tailwind Configuration */
         :root {
-            --color-primary: #007aff; /* Electric Blue Accent */
-            --color-background-dark: #111827; /* Dark Slate Background */
-            --color-card-dark: #1f2937; /* Slightly Lighter Card Background */
+            --color-primary: #007aff;
+            --color-background-dark: #111827;
+            --color-card-dark: #1f2937;
             --color-text-light: #f3f4f6;
             --color-text-faint: #9ca3af;
         }
@@ -27,7 +25,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Utility classes for smooth fade-in animation */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -40,22 +37,14 @@
             transform: translateY(0);
         }
 
-        /* Custom scrollbar for aesthetics on supported browsers */
-        body::-webkit-scrollbar {
-            width: 8px;
-        }
-
+        body::-webkit-scrollbar { width: 8px; }
         body::-webkit-scrollbar-thumb {
             background-color: #374151;
             border-radius: 4px;
         }
         
-        /* Ensure max width on large screens */
-        .content-container {
-            max-width: 1200px;
-        }
+        .content-container { max-width: 1200px; }
         
-        /* Custom style for the detailed experience list */
         .experience-list li {
             position: relative;
             padding-left: 1.5rem;
@@ -64,8 +53,13 @@
             content: '•';
             position: absolute;
             left: 0;
-            color: #3b82f6; /* Blue-500 */
+            color: #3b82f6;
             font-weight: bold;
+        }
+
+        .learning-glow {
+            border: 1px dashed rgba(59, 130, 246, 0.5);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.1);
         }
     </style>
 </head>
@@ -75,21 +69,18 @@
     <!-- Sticky Navigation Bar -->
     <header class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-700 shadow-xl">
         <div class="content-container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-            <!-- Navigation Logo -->
             <a href="#hero" class="text-xl font-extrabold text-white tracking-wider">
                 Dawit <span class="text-blue-500">Beyene</span>
             </a>
             
-            <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-6">
                 <a href="#about" class="text-sm font-medium text-gray-300 hover:text-blue-400 transition">About</a>
                 <a href="#skills" class="text-sm font-medium text-gray-300 hover:text-blue-400 transition">Skills</a>
-                <a href="#projects" class="text-sm font-medium text-gray-300 hover:text-blue-400 transition">Projects</a>
+                <a href="#projects" class="text-sm font-medium text-gray-300 hover:text-blue-400 transition">Focus</a>
                 <a href="#experience" class="text-sm font-medium text-gray-300 hover:text-blue-400 transition">Journey</a>
                 <a href="#contact" class="text-sm font-medium text-gray-300 hover:text-blue-400 transition">Contact</a>
             </nav>
 
-            <!-- Mobile Menu Toggle -->
             <button id="menu-toggle" class="md:hidden p-2 rounded-md hover:bg-gray-700 transition">
                 <i data-lucide="menu" class="w-6 h-6 text-white"></i>
             </button>
@@ -105,7 +96,7 @@
             <nav class="flex flex-col space-y-4 mt-16">
                 <a href="#about" class="mobile-link text-2xl font-medium text-white hover:text-blue-400 transition py-2 border-b border-gray-700">About</a>
                 <a href="#skills" class="mobile-link text-2xl font-medium text-white hover:text-blue-400 transition py-2 border-b border-gray-700">Skills</a>
-                <a href="#projects" class="mobile-link text-2xl font-medium text-white hover:text-blue-400 transition py-2 border-b border-gray-700">Projects</a>
+                <a href="#projects" class="mobile-link text-2xl font-medium text-white hover:text-blue-400 transition py-2 border-b border-gray-700">Focus</a>
                 <a href="#experience" class="mobile-link text-2xl font-medium text-white hover:text-blue-400 transition py-2 border-b border-gray-700">Journey</a>
                 <a href="#contact" class="mobile-link text-2xl font-medium text-white hover:text-blue-400 transition py-2 border-b border-gray-700">Contact</a>
             </nav>
@@ -117,13 +108,13 @@
         <!-- 1. Hero Section -->
         <section id="hero" class="min-h-[70vh] flex flex-col justify-center items-center text-center py-20 fade-in" style="--delay: 0s;">
             <p class="text-sm font-semibold tracking-widest uppercase text-blue-400 mb-4 bg-gray-800 py-1 px-4 rounded-full shadow-lg ring-1 ring-blue-500/20">
-                Test Engineer | ISTQB Advanced Test Analyst
+                ISTQB Advanced Test Analyst | Quality Assurance Specialist
             </p>
             <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tighter text-white max-w-4xl">
-                Crafting <span class="text-blue-500">Intelligent</span> Test Systems with Automation & Data Science.
+                Ensuring <span class="text-blue-500">System Integrity</span> through Rigorous Analysis & Emerging Automation.
             </h1>
             <p class="mt-6 text-lg sm:text-xl text-gray-400 max-w-3xl">
-                ISTQB Advanced Certified Test Analyst specializing in automation, embedded hardware validation, and regulatory compliance.
+                Expert in functional validation and regulatory compliance for complex embedded systems, currently scaling manual excellence into automated frameworks.
             </p>
             
             <div class="mt-10 flex flex-col sm:flex-row gap-4">
@@ -142,10 +133,11 @@
             
             <div class="bg-gray-800 p-8 sm:p-12 rounded-3xl border border-gray-700 shadow-2xl max-w-4xl mx-auto">
                 <p class="text-lg text-gray-300 leading-relaxed">
-                    ISTQB Advanced Test Analyst certified Test Engineer with strong experience in functional testing, test design, automation (Selenium, Playwright, PyTest), API testing (Postman, Python Requests), risk-based testing, and CI/CD integration. My background in gaming system testing, embedded hardware validation, and reproducible workflows (MSc Geoinformatics) gives me a unique perspective on comprehensive quality assurance across complex systems.
+                    I am an ISTQB Advanced Level Test Analyst with a deep-rooted focus on the precision of complex systems. With a background in Geoinformatics and Computer Science, I specialize in bridging the gap between hardware specifications and high-stakes regulatory requirements. 
+                    <br><br>
+                    Having mastered the art of exploratory testing, risk-based analysis, and black-box validation in the gaming and embedded sectors, I am currently <strong>evolving my toolkit toward Test Automation</strong>. I am actively building hands-on proficiency in Selenium, Playwright, and PyTest to complement my analytical expertise with scalable, code-driven quality solutions.
                 </p>
                 <div class="mt-8 pt-6 border-t border-gray-700 flex flex-wrap gap-4 justify-start items-center">
-                    <!-- LINK UPDATED IN PREVIOUS STEP -->
                     <a href="https://atsqa.org/certified-testers/profile/d6527ce36dc148fba38011e727c59a7e" target="_blank" class="text-blue-400 font-semibold flex items-center hover:text-blue-300 transition">
                         <i data-lucide="award" class="w-5 h-5 mr-2"></i> 
                         ISTQB Advanced Level Test Analyst Certified
@@ -157,55 +149,56 @@
 
         <!-- 3. Skills Grid -->
         <section id="skills" class="py-20 fade-in" style="--delay: 0.4s;">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">Core Technical Expertise</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">Technical Toolkit</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 <!-- Skill Card 1 -->
                 <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 shadow-xl hover:border-blue-500 transition duration-300 group">
                     <i data-lucide="flask-conical" class="w-8 h-8 text-blue-500 mb-4 group-hover:scale-110 transition"></i>
-                    <h3 class="text-xl font-semibold text-white mb-3">Testing & Analysis</h3>
+                    <h3 class="text-xl font-semibold text-white mb-3">Core QA Expertise</h3>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Advanced test analysis</li>
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Black-box & embedded testing</li>
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Regulatory compliance testing</li>
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Risk-based testing methodologies</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-blue-400"></i> Advanced Test Analysis</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-blue-400"></i> Exploratory & Black-box</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-blue-400"></i> Regulatory Compliance</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-blue-400"></i> Risk-Based Testing</li>
                     </ul>
                 </div>
 
-                <!-- Skill Card 2 -->
-                <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 shadow-xl hover:border-blue-500 transition duration-300 group">
-                    <i data-lucide="code" class="w-8 h-8 text-blue-500 mb-4 group-hover:scale-110 transition"></i>
-                    <h3 class="text-xl font-semibold text-white mb-3">Automation & Scripting</h3>
+                <!-- Skill Card 2: THE EVOLUTION CARD -->
+                <div class="bg-gray-900 p-6 rounded-2xl learning-glow border border-blue-500/30 shadow-xl transition duration-300 group">
+                    <i data-lucide="code" class="w-8 h-8 text-blue-400 mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="text-xl font-semibold text-white mb-3">Automation Journey</h3>
+                    <p class="text-xs text-blue-400 mb-3 font-bold uppercase tracking-tighter">Actively Developing Skills In:</p>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Selenium, Playwright, PyTest</li>
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Python, C++, SQL (Scripting)</li>
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Modular framework design</li>
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Continuous regression suites</li>
+                        <li class="flex items-center"><i data-lucide="trending-up" class="w-4 h-4 mr-2 text-green-400"></i> Selenium & Playwright</li>
+                        <li class="flex items-center"><i data-lucide="trending-up" class="w-4 h-4 mr-2 text-green-400"></i> PyTest Framework Design</li>
+                        <li class="flex items-center"><i data-lucide="trending-up" class="w-4 h-4 mr-2 text-green-400"></i> Python & SQL Scripting</li>
+                        <li class="flex items-center"><i data-lucide="trending-up" class="w-4 h-4 mr-2 text-green-400"></i> CI/CD Pipeline Logic</li>
                     </ul>
                 </div>
 
                 <!-- Skill Card 3 -->
                 <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 shadow-xl hover:border-blue-500 transition duration-300 group">
                     <i data-lucide="server" class="w-8 h-8 text-blue-500 mb-4 group-hover:scale-110 transition"></i>
-                    <h3 class="text-xl font-semibold text-white mb-3">API & Backend</h3>
+                    <h3 class="text-xl font-semibold text-white mb-3">Systems & API</h3>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Postman & Python Requests</li>
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Schema/contract validation</li>
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> PostgreSQL/MySQL queries</li>
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> System integration testing</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-blue-400"></i> Postman API Validation</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-blue-400"></i> Embedded Hardware Testing</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-blue-400"></i> Database (PostgreSQL)</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-blue-400"></i> Integration Testing</li>
                     </ul>
                 </div>
 
                 <!-- Skill Card 4 -->
                 <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 shadow-xl hover:border-blue-500 transition duration-300 group">
                     <i data-lucide="workflow" class="w-8 h-8 text-blue-500 mb-4 group-hover:scale-110 transition"></i>
-                    <h3 class="text-xl font-semibold text-white mb-3">DevOps & CI/CD</h3>
+                    <h3 class="text-xl font-semibold text-white mb-3">Professional Tools</h3>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> GitHub Actions setup</li>
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Jenkins integration</li>
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Defect tracking (Jira/GLI tools)</li>
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i> Automated deployment pipelines</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-blue-400"></i> Jira & GLI Tools</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-blue-400"></i> Version Control (Git)</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-blue-400"></i> Agile/Scrum Workflows</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-blue-400"></i> Detailed Test Reporting</li>
                     </ul>
                 </div>
             </div>
@@ -213,7 +206,7 @@
 
         <!-- 4. Projects -->
         <section id="projects" class="py-20 fade-in" style="--delay: 0.6s;">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">Key Projects & Research</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">Focus Areas</h2>
             
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 
@@ -222,17 +215,17 @@
                         <i data-lucide="clipboard-list" class="w-6 h-6 text-yellow-400 mr-2"></i>
                         <span class="text-sm font-medium text-yellow-400">Methodology</span>
                     </div>
-                    <h3 class="text-xl font-semibold text-white mb-2">Strategic Compliance Testing</h3>
-                    <p class="text-gray-400">Architected comprehensive test strategies for high-stakes gaming ecosystems, ensuring 100% alignment between complex hardware specifications and international regulatory requirements.</p>
+                    <h3 class="text-xl font-semibold text-white mb-2">Compliance Frameworks</h3>
+                    <p class="text-gray-400">Defined complex test strategies for gaming ecosystems, mapping hardware requirements to international regulatory standards with zero-tolerance for error.</p>
                 </div>
 
                 <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 shadow-xl hover:border-blue-500 transition duration-300">
                     <div class="flex items-center mb-3">
-                        <i data-lucide="terminal" class="w-6 h-6 text-red-400 mr-2"></i>
-                        <span class="text-sm font-medium text-red-400">Validation</span>
+                        <i data-lucide="terminal" class="w-6 h-6 text-blue-400 mr-2"></i>
+                        <span class="text-sm font-medium text-blue-400">Technical Growth</span>
                     </div>
-                    <h3 class="text-xl font-semibold text-white mb-2">System Integration Validation</h3>
-                    <p class="text-gray-400">Engineered validation workflows using Python scripting and SQL to verify data integrity and secure communication between embedded hardware and backend control systems.</p>
+                    <h3 class="text-xl font-semibold text-white mb-2">Automation Lab Projects</h3>
+                    <p class="text-gray-400">Actively building automated suites in Python/PyTest to simulate user journeys, currently focused on mastering Page Object Models (POM) and API mocks.</p>
                 </div>
 
                 <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 shadow-xl hover:border-blue-500 transition duration-300">
@@ -240,41 +233,34 @@
                         <i data-lucide="book-open" class="w-6 h-6 text-green-400 mr-2"></i>
                         <span class="text-sm font-medium text-green-400">Research</span>
                     </div>
-                    <h3 class="text-xl font-semibold text-white mb-2">MSc Thesis: Reproducible Workflows</h3>
-                    <p class="text-gray-400">Academic research focusing on semantic annotation to ensure the reproducibility and reliability of complex geospatial data processing pipelines—a focus on data quality from the ground up.</p>
+                    <h3 class="text-xl font-semibold text-white mb-2">MSc: Reproducible Workflows</h3>
+                    <p class="text-gray-400">Academic research focusing on semantic annotation to ensure the reproducibility of complex geospatial data processing—a focus on data quality from the ground up.</p>
                 </div>
             </div>
         </section>
         
         <!-- 5. Experience/Education Timeline -->
         <section id="experience" class="py-20 fade-in" style="--delay: 0.8s;">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">Professional & Academic Journey</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">Professional Journey</h2>
             
             <div class="relative max-w-3xl mx-auto">
-                <!-- Timeline Line -->
                 <div class="absolute left-6 md:left-1/2 w-0.5 bg-gray-700 h-full transform md:-translate-x-1/2"></div>
                 
-                <!-- Timeline Items Container -->
                 <div class="space-y-12">
                     
-                    <!-- Item 1: GLI Europe B.V. (Left/Right Layout) -->
-                    <!-- FIX: Added pl-12 (padding-left: 3rem) to the content wrapper on mobile to ensure the date text clears the timeline axis. Removed unnecessary mobile justify class from flex. -->
+                    <!-- Item 1: GLI Europe -->
                     <div class="relative timeline-item flex w-full md:justify-start">
                         <div class="md:w-1/2 md:pr-12 w-full pl-12">
                             <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 shadow-xl transition hover:shadow-blue-500/20">
                                 <p class="text-sm text-blue-400 font-semibold mb-1">2021 – Present</p>
                                 <h3 class="text-xl font-bold text-white">Test Engineer</h3>
                                 <p class="text-gray-400 mb-2">GLI Europe B.V., Haarlem, NL</p>
-                                <!-- Detailed Experience Points added here -->
                                 <ul class="text-gray-500 text-sm space-y-2 experience-list">
-                                    <li>Developed and executed comprehensive test plans for gaming hardware (e.g., slot machines, controllers) and software (e.g., game engines), ensuring compliance with regulatory standards across several markets (e.g., North America, Europe) for clients like Novomatic, EGT.</li>
-                                    <li>Conducted functional, regression, and performance testing on gaming systems.</li>
-                                    <li>Performed hardware compatibility testing for gaming devices, validating performance under diverse conditions.</li>
-                                    <li>Utilized testing tools, e.g., Jira and proprietary GLI tools, to track defects, manage test cases, and streamline reporting, improving testing efficiency.</li>
-                                    <li>Collaborated with cross-functional teams, including developers, product managers, and regulatory bodies, to resolve critical issues and ensure adherence to client specifications and industry standards.</li>
-                                    <li>Verified software integrity and security through authentication and validation processes, ensuring safe deployment on casino floors.</li>
-                                    <li>Prepared detailed test reports and documentation for stakeholders, providing actionable insights that enhanced product quality.</li>
-                                    <li>Supported regulatory compliance by conducting tests aligned with jurisdictional requirements, facilitating successful certification across global markets.</li>
+                                    <li>Design and execute high-level test plans for gaming hardware and software, ensuring 100% compliance with jurisdictional regulations (North America, Europe).</li>
+                                    <li>Lead functional, regression, and hardware-software integration testing for complex embedded devices.</li>
+                                    <li>Author technical documentation and test reports for international regulatory bodies.</li>
+                                    <li><strong>Actively bridging the manual-to-automation gap</strong> by assisting in identifying candidates for automated regression suites.</li>
+                                    <li>Utilize Python and SQL to verify software integrity and cryptographic signatures during deployment validation.</li>
                                 </ul>
                             </div>
                         </div>
@@ -282,7 +268,6 @@
                     </div>
 
                     <!-- Item 2: University of Twente -->
-                    <!-- FIX: Added pl-12 (padding-left: 3rem) to the content wrapper on mobile to ensure the date text clears the timeline axis. Removed unnecessary mobile justify class from flex. -->
                     <div class="relative timeline-item flex w-full md:justify-end">
                         <div class="md:w-1/2 md:pl-12 md:order-2 w-full pl-12">
                              <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 shadow-xl transition hover:shadow-blue-500/20">
@@ -296,33 +281,17 @@
                     </div>
                     
                     <!-- Item 3: Woldia University -->
-                    <!-- FIX: Added pl-12 (padding-left: 3rem) to the content wrapper on mobile to ensure the date text clears the timeline axis. Removed unnecessary mobile justify class from flex. -->
                     <div class="relative timeline-item flex w-full md:justify-start">
                         <div class="md:w-1/2 md:pr-12 w-full pl-12">
                             <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 shadow-xl transition hover:shadow-blue-500/20">
                                 <p class="text-sm text-blue-400 font-semibold mb-1">2017 – 2019</p>
                                 <h3 class="text-xl font-bold text-white">Graduate Assistant Lecturer</h3>
                                 <p class="text-gray-400 mb-2">Woldia University, Ethiopia</p>
-                                <p class="text-gray-500 text-sm">Taught fundamental computer science and programming courses (C++) and mentored undergraduate students on their final year projects.</p>
+                                <p class="text-gray-500 text-sm">Taught fundamental computer science and programming (C++) and mentored final-year project students.</p>
                             </div>
                         </div>
                         <div class="timeline-dot absolute left-6 top-7 md:left-1/2 w-4 h-4 bg-blue-600 rounded-full border-2 border-gray-900 transform md:-translate-x-1/2"></div>
                     </div>
-
-                    <!-- Item 4: Hawassa University -->
-                    <!-- FIX: Added pl-12 (padding-left: 3rem) to the content wrapper on mobile to ensure the date text clears the timeline axis. Removed unnecessary mobile justify class from flex. -->
-                    <div class="relative timeline-item flex w-full md:justify-end">
-                        <div class="md:w-1/2 md:pl-12 md:order-2 w-full pl-12">
-                            <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 shadow-xl transition hover:shadow-blue-500/20">
-                                <p class="text-sm text-blue-400 font-semibold mb-1">2013 – 2017</p>
-                                <h3 class="text-xl font-bold text-white">BSc Computer Science</h3>
-                                <p class="text-gray-400 mb-2">Hawassa University, Ethiopia</p>
-                                <p class="text-gray-500 text-sm">Solid foundation in core computer science principles, including algorithms, data structures, and programming paradigms.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-dot absolute left-6 top-7 md:left-1/2 w-4 h-4 bg-blue-600 rounded-full border-2 border-gray-900 transform md:-translate-x-1/2 md:order-1"></div>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -330,15 +299,11 @@
         <!-- 6. Contact Card -->
         <section id="contact" class="py-20 fade-in" style="--delay: 1s;">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">Let's Connect</h2>
-            
             <div class="bg-gray-800 p-8 sm:p-10 rounded-3xl border border-gray-700 shadow-2xl max-w-2xl mx-auto text-center">
                 <p class="text-lg text-gray-300 mb-8">
-                    I am currently open to new Test Engineering or advanced validation roles that require expertise in compliance, automation, and data analysis.
+                    I am currently open to new opportunities in Quality Engineering and Advanced Validation that leverage both manual precision and evolving automation.
                 </p>
-                
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
-                    
-                    <!-- Email -->
                     <div class="flex items-center p-4 bg-gray-900 rounded-xl">
                         <i data-lucide="mail" class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0"></i>
                         <div>
@@ -346,8 +311,6 @@
                             <a href="mailto:dawithaile225@gmail.com" class="text-white hover:text-blue-400 transition break-all">dawithaile225@gmail.com</a>
                         </div>
                     </div>
-                    
-                    <!-- Phone 1 -->
                     <div class="flex items-center p-4 bg-gray-900 rounded-xl">
                         <i data-lucide="phone" class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0"></i>
                         <div>
@@ -355,36 +318,14 @@
                             <a href="tel:+31687381398" class="text-white hover:text-blue-400 transition">+31 6 87 38 13 98</a>
                         </div>
                     </div>
-                    
-                    <!-- Phone 2 -->
-                    <div class="flex items-center p-4 bg-gray-900 rounded-xl">
-                        <i data-lucide="phone" class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0"></i>
-                        <div>
-                            <p class="text-sm text-gray-400">Phone (Alt)</p>
-                            <a href="tel:+31648352778" class="text-white hover:text-blue-400 transition">+31 6 48 35 27 78</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Location -->
-                    <div class="flex items-center p-4 bg-gray-900 rounded-xl">
-                        <i data-lucide="map-pin" class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0"></i>
-                        <div>
-                            <p class="text-sm text-gray-400">Location</p>
-                            <p class="text-white">Velsen-Noord, Netherlands</p>
-                        </div>
-                    </div>
                 </div>
-                
                 <a href="https://www.linkedin.com/in/dawit-haile-beyene" target="_blank" class="mt-8 inline-flex items-center justify-center text-sm font-medium rounded-full text-blue-400 bg-gray-700 py-2 px-6 hover:bg-gray-600 transition">
                     <i data-lucide="linkedin" class="w-4 h-4 mr-2"></i> View LinkedIn Profile
                 </a>
-
             </div>
         </section>
-
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-900 border-t border-gray-800 mt-12 py-6">
         <div class="content-container mx-auto px-4 text-center text-gray-500 text-sm">
             <p>&copy; 2026 Dawit Beyene. All rights reserved.</p>
@@ -393,18 +334,15 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // 1. Initialize Lucide Icons
             lucide.createIcons();
             
-            // 2. Mobile Menu Logic
             const menuToggle = document.getElementById('menu-toggle');
             const closeMenu = document.getElementById('close-menu');
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileLinks = document.querySelectorAll('.mobile-link');
 
             const toggleMenu = (open) => {
-                const isOpen = open !== undefined ? open : mobileMenu.classList.contains('translate-x-full');
-                if (isOpen) {
+                if (open) {
                     mobileMenu.classList.remove('translate-x-full');
                     document.body.classList.add('overflow-hidden'); 
                 } else {
@@ -415,57 +353,20 @@
 
             menuToggle.addEventListener('click', () => toggleMenu(true));
             closeMenu.addEventListener('click', () => toggleMenu(false));
-            
-            // Close menu when a link is clicked
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    // Slight timeout to allow scroll behavior to start before closing
-                    setTimeout(() => toggleMenu(false), 200); 
-                });
-            });
+            mobileLinks.forEach(link => link.addEventListener('click', () => setTimeout(() => toggleMenu(false), 200)));
 
-            // 3. Fade-Up on Scroll Animation (Intersection Observer)
             const fadeElements = document.querySelectorAll('.fade-in');
-            
-            const observerOptions = {
-                root: null, // viewport
-                rootMargin: '0px',
-                threshold: 0.1 // Trigger when 10% of the element is visible
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
+            const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
-                        // Stop observing once the element is visible
                         observer.unobserve(entry.target);
                     }
                 });
-            }, observerOptions);
+            }, { threshold: 0.1 });
 
-            fadeElements.forEach(element => {
-                observer.observe(element);
-            });
-            
-            // 4. Smooth Scrolling for Navigation (Tailwind and CSS already handle most, this is for robust event handling)
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        // Use scrollIntoView with smooth behavior
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
+            fadeElements.forEach(element => observer.observe(element));
         });
     </script>
 </body>
 </html>
-
-
-
