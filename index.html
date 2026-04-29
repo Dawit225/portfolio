@@ -242,27 +242,34 @@
         </section>
         
         <!-- 5. Experience/Education Timeline -->
-        <section id="experience" class="py-20 fade-in" style="--delay: 0.8s;">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">Professional Journey</h2>
+       <section id="experience" class="py-20 fade-in" style="--delay: 0.8s;">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">Professional & Academic Journey</h2>
             
             <div class="relative max-w-3xl mx-auto">
+                <!-- Timeline Line -->
                 <div class="absolute left-6 md:left-1/2 w-0.5 bg-gray-700 h-full transform md:-translate-x-1/2"></div>
                 
+                <!-- Timeline Items Container -->
                 <div class="space-y-12">
                     
-                    <!-- Item 1: GLI Europe -->
+                    <!-- Item 1: GLI Europe B.V. (Left/Right Layout) -->
+                    <!-- FIX: Added pl-12 (padding-left: 3rem) to the content wrapper on mobile to ensure the date text clears the timeline axis. Removed unnecessary mobile justify class from flex. -->
                     <div class="relative timeline-item flex w-full md:justify-start">
                         <div class="md:w-1/2 md:pr-12 w-full pl-12">
                             <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 shadow-xl transition hover:shadow-blue-500/20">
                                 <p class="text-sm text-blue-400 font-semibold mb-1">2021 – Present</p>
                                 <h3 class="text-xl font-bold text-white">Test Engineer</h3>
                                 <p class="text-gray-400 mb-2">GLI Europe B.V., Haarlem, NL</p>
+                                <!-- Detailed Experience Points added here -->
                                 <ul class="text-gray-500 text-sm space-y-2 experience-list">
-                                    <li>Design and execute high-level test plans for gaming hardware and software, ensuring 100% compliance with jurisdictional regulations (North America, Europe).</li>
-                                    <li>Lead functional, regression, and hardware-software integration testing for complex embedded devices.</li>
-                                    <li>Author technical documentation and test reports for international regulatory bodies.</li>
-                                    <li><strong>Actively bridging the manual-to-automation gap</strong> by assisting in identifying candidates for automated regression suites.</li>
-                                    <li>Utilize Python and SQL to verify software integrity and cryptographic signatures during deployment validation.</li>
+                                    <li>Developed and executed comprehensive test plans for gaming hardware (e.g., slot machines, controllers) and software (e.g., game engines), ensuring compliance with regulatory standards across several markets (e.g., North America, Europe) for clients like Novomatic, EGT.</li>
+                                    <li>Conducted functional, regression, and performance testing on gaming systems.</li>
+                                    <li>Performed hardware compatibility testing for gaming devices, validating performance under diverse conditions.</li>
+                                    <li>Utilized testing tools, e.g., Jira and proprietary GLI tools, to track defects, manage test cases, and streamline reporting, improving testing efficiency.</li>
+                                    <li>Collaborated with cross-functional teams, including developers, product managers, and regulatory bodies, to resolve critical issues and ensure adherence to client specifications and industry standards.</li>
+                                    <li>Verified software integrity and security through authentication and validation processes, ensuring safe deployment on casino floors.</li>
+                                    <li>Prepared detailed test reports and documentation for stakeholders, providing actionable insights that enhanced product quality.</li>
+                                    <li>Supported regulatory compliance by conducting tests aligned with jurisdictional requirements, facilitating successful certification across global markets.</li>
                                 </ul>
                             </div>
                         </div>
@@ -270,6 +277,7 @@
                     </div>
 
                     <!-- Item 2: University of Twente -->
+                    <!-- FIX: Added pl-12 (padding-left: 3rem) to the content wrapper on mobile to ensure the date text clears the timeline axis. Removed unnecessary mobile justify class from flex. -->
                     <div class="relative timeline-item flex w-full md:justify-end">
                         <div class="md:w-1/2 md:pl-12 md:order-2 w-full pl-12">
                              <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 shadow-xl transition hover:shadow-blue-500/20">
@@ -283,29 +291,50 @@
                     </div>
                     
                     <!-- Item 3: Woldia University -->
+                    <!-- FIX: Added pl-12 (padding-left: 3rem) to the content wrapper on mobile to ensure the date text clears the timeline axis. Removed unnecessary mobile justify class from flex. -->
                     <div class="relative timeline-item flex w-full md:justify-start">
                         <div class="md:w-1/2 md:pr-12 w-full pl-12">
                             <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 shadow-xl transition hover:shadow-blue-500/20">
                                 <p class="text-sm text-blue-400 font-semibold mb-1">2017 – 2019</p>
                                 <h3 class="text-xl font-bold text-white">Graduate Assistant Lecturer</h3>
                                 <p class="text-gray-400 mb-2">Woldia University, Ethiopia</p>
-                                <p class="text-gray-500 text-sm">Taught fundamental computer science and programming (C++) and mentored final-year project students.</p>
+                                <p class="text-gray-500 text-sm">Taught fundamental computer science and programming courses (C++) and mentored undergraduate students on their final year projects.</p>
                             </div>
                         </div>
                         <div class="timeline-dot absolute left-6 top-7 md:left-1/2 w-4 h-4 bg-blue-600 rounded-full border-2 border-gray-900 transform md:-translate-x-1/2"></div>
                     </div>
+
+                    <!-- Item 4: Hawassa University -->
+                    <!-- FIX: Added pl-12 (padding-left: 3rem) to the content wrapper on mobile to ensure the date text clears the timeline axis. Removed unnecessary mobile justify class from flex. -->
+                    <div class="relative timeline-item flex w-full md:justify-end">
+                        <div class="md:w-1/2 md:pl-12 md:order-2 w-full pl-12">
+                            <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 shadow-xl transition hover:shadow-blue-500/20">
+                                <p class="text-sm text-blue-400 font-semibold mb-1">2013 – 2017</p>
+                                <h3 class="text-xl font-bold text-white">BSc Computer Science</h3>
+                                <p class="text-gray-400 mb-2">Hawassa University, Ethiopia</p>
+                                <p class="text-gray-500 text-sm">Solid foundation in core computer science principles, including algorithms, data structures, and programming paradigms.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot absolute left-6 top-7 md:left-1/2 w-4 h-4 bg-blue-600 rounded-full border-2 border-gray-900 transform md:-translate-x-1/2 md:order-1"></div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
         <!-- 6. Contact Card -->
+     <!-- 6. Contact Card -->
         <section id="contact" class="py-20 fade-in" style="--delay: 1s;">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">Let's Connect</h2>
+            
             <div class="bg-gray-800 p-8 sm:p-10 rounded-3xl border border-gray-700 shadow-2xl max-w-2xl mx-auto text-center">
                 <p class="text-lg text-gray-300 mb-8">
-                    I am currently open to new opportunities in Quality Engineering and Advanced Validation that leverage both manual precision and evolving automation.
+                    I am currently open to new Test Engineering or advanced validation roles that require expertise in compliance, automation, and data analysis.
                 </p>
+                
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+                    
+                    <!-- Email -->
                     <div class="flex items-center p-4 bg-gray-900 rounded-xl">
                         <i data-lucide="mail" class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0"></i>
                         <div>
@@ -313,6 +342,8 @@
                             <a href="mailto:dawithaile225@gmail.com" class="text-white hover:text-blue-400 transition break-all">dawithaile225@gmail.com</a>
                         </div>
                     </div>
+                    
+                    <!-- Phone 1 -->
                     <div class="flex items-center p-4 bg-gray-900 rounded-xl">
                         <i data-lucide="phone" class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0"></i>
                         <div>
@@ -320,10 +351,30 @@
                             <a href="tel:+31687381398" class="text-white hover:text-blue-400 transition">+31 6 87 38 13 98</a>
                         </div>
                     </div>
+                    
+                    <!-- Phone 2 -->
+                    <div class="flex items-center p-4 bg-gray-900 rounded-xl">
+                        <i data-lucide="phone" class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0"></i>
+                        <div>
+                            <p class="text-sm text-gray-400">Phone (Alt)</p>
+                            <a href="tel:+31648352778" class="text-white hover:text-blue-400 transition">+31 6 48 35 27 78</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Location -->
+                    <div class="flex items-center p-4 bg-gray-900 rounded-xl">
+                        <i data-lucide="map-pin" class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0"></i>
+                        <div>
+                            <p class="text-sm text-gray-400">Location</p>
+                            <p class="text-white">Velsen-Noord, Netherlands</p>
+                        </div>
+                    </div>
                 </div>
+                
                 <a href="https://www.linkedin.com/in/dawit-haile-beyene" target="_blank" class="mt-8 inline-flex items-center justify-center text-sm font-medium rounded-full text-blue-400 bg-gray-700 py-2 px-6 hover:bg-gray-600 transition">
                     <i data-lucide="linkedin" class="w-4 h-4 mr-2"></i> View LinkedIn Profile
                 </a>
+
             </div>
         </section>
     </main>
